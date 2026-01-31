@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VARENO Events BD | Coming Soon</title>
+    
+    <!-- Fonts: Cinzel for the Logo feel, Inter for clean UI -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <!-- GSAP & Lenis -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.33/dist/lenis.min.js"></script>
+
+    <style>
+        :root {
+            --brand-gold: #D4AF37; 
+            --brand-gold-bright: #F5E6A5;
+            --bg-dark: #080808;
+            --text-white: #FFFFFF;
+        }
+
+        /* Lenis Smoothing */
+        html.lenis { height: auto; }
+        .lenis-smooth { scroll-behavior: auto !important; }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-white);
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 120%;
+            background: linear-gradient(to bottom, rgba(8,8,8,0.7), rgba(8,8,8,1)), 
+                        url('https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80&w=2000&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            z-index: -2;
+        }
+
+        .hero-content {
+            text-align: center;
+            z-index: 10;
+        }
+
+        .brand-logo-text {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(3.5rem, 12vw, 10rem);
+            line-height: 1;
+            margin: 0;
+            text-transform: uppercase;
+            color: var(--brand-gold);
+            text-shadow: 0 0 30px rgba(212, 175, 55, 0.4);
+            letter-spacing: 4px;
+        }
+
+        .brand-sub-text {
+            font-family: 'Inter', sans-serif;
+            font-size: clamp(0.8rem, 2vw, 1.2rem);
+            letter-spacing: 12px;
+            color: white;
+            text-transform: uppercase;
+            margin-top: 10px;
+            font-weight: 400;
+            opacity: 0.9;
+        }
+
+        /* Parallax Sections */
+        .parallax-section {
+            padding: 10vh 5vw;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            min-height: 100vh;
+            gap: 5vw;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .parallax-section.reverse {
+            flex-direction: row-reverse;
+        }
+
+        @media (max-width: 968px) {
+            .parallax-section, .parallax-section.reverse {
+                flex-direction: column;
+                text-align: center;
+                padding: 10vh 8vw;
+            }
+        }
+
+        .image-frame {
+            position: relative;
+            flex: 1;
+            width: 100%;
+            height: 75vh;
+            max-height: 800px;
+            overflow: hidden;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+        }
+
+        .inner-img {
+            position: absolute;
+            top: -25%; /* More space for movement */
+            left: 0;
+            width: 100%;
+            height: 150%;
+            background-size: cover;
+            background-position: center;
+            will-change: transform;
+        }
+
+        .content-box {
+            flex: 0.8;
+            padding: 20px;
+        }
+
+        .content-box h2 {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(2.5rem, 5vw, 4.5rem);
+            color: var(--brand-gold);
+            margin-bottom: 25px;
+            line-height: 1.1;
+        }
+
+        .content-box p {
+            font-size: 1.1rem;
+            color: #ccc;
+            line-height: 1.8;
+            margin-bottom: 30px;
+            max-width: 500px;
+        }
+
+        @media (max-width: 968px) {
+            .content-box p { margin: 0 auto 30px; }
+            .image-frame { height: 50vh; margin-bottom: 30px; }
+        }
+
+        .date-badge {
+            display: inline-block;
+            padding: 10px 20px;
+            border: 1px solid var(--brand-gold);
+            color: var(--brand-gold);
+            font-weight: 700;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        /* Buttons */
+        .gold-btn {
+            display: inline-block;
+            padding: 18px 45px;
+            background: transparent;
+            border: 1px solid var(--brand-gold);
+            color: var(--brand-gold);
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: 2px;
+            transition: all 0.4s ease;
+            cursor: pointer;
+        }
+
+        .gold-btn:hover {
+            background: var(--brand-gold);
+            color: black;
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+        }
+
+        /* Light effects */
+        .gold-blob {
+            position: fixed;
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.05) 0%, rgba(0,0,0,0) 70%);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        footer {
+            padding: 100px 5vw;
+            text-align: center;
+            background: #000;
+            border-top: 1px solid #111;
+        }
+
+        .footer-contact {
+            margin-top: 20px;
+            font-size: 1.2rem;
+            color: var(--brand-gold);
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+        .socials {
+            margin: 40px 0;
+        }
+
+        .socials a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 0.9rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            transition: color 0.3s;
+        }
+
+        .socials a:hover {
+            color: var(--brand-gold);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="gold-blob" style="top: -20%; right: -10%;"></div>
+    <div class="gold-blob" style="bottom: -10%; left: -10%;"></div>
+
+    <div id="smooth-content">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-bg" id="hero-bg"></div>
+            <div class="hero-content">
+                <h1 class="brand-logo-text">VARENO</h1>
+                <p class="brand-sub-text">EVENTS BD</p>
+                <div style="margin-top: 50px; font-size: 0.7rem; letter-spacing: 5px; opacity: 0.6;">
+                    ESTABLISHED 2026 • PREMIUM EVENT MANAGEMENT
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 1: Wedding -->
+        <section class="parallax-section">
+            <div class="image-frame">
+                <div class="inner-img" style="background-image: url('https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=1200');" data-speed="-0.15"></div>
+            </div>
+            <div class="content-box">
+                <div class="date-badge">Coming July 2026</div>
+                <h2>Royal Wedding Curation</h2>
+                <p>The definitive interface for luxury wedding management in Bangladesh. We handle the logistical precision while you define your legacy.</p>
+                <button onclick="scrollToContact()" class="gold-btn">Pre-Book Consultation</button>
+            </div>
+        </section>
+
+        <!-- Section 2: Corporate -->
+        <section class="parallax-section reverse">
+            <div class="image-frame">
+                <div class="inner-img" style="background-image: url('https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=1200');" data-speed="0.12"></div>
+            </div>
+            <div class="content-box">
+                <div class="date-badge">Corporate Excellence</div>
+                <h2>Strategic Occasions</h2>
+                <p>Meticulous planning for conferences, grand openings, and corporate gala events. Elevating your brand through flawless execution.</p>
+                <button onclick="scrollToContact()" class="gold-btn">Partner With Us</button>
+            </div>
+        </section>
+
+        <!-- Footer / Contact Section -->
+        <footer id="contact-section">
+            <div class="brand-logo-text" style="font-size: 3rem; margin-bottom: 20px;">VARENO</div>
+            <p style="font-size: 0.8rem; letter-spacing: 4px; opacity: 0.5;">BANGLADESH</p>
+            
+            <div class="footer-contact">
+                <a href="tel:+8801706652530" style="color: inherit; text-decoration: none;">01706652530</a>
+            </div>
+
+            <div class="socials">
+                <a href="https://facebook.com/share/1EjWLyNSuE/">Facebook</a>
+                <a href="https://instagram.com/vareno_events_bd">Instagram</a>
+                <a href="https://wa.me/8801706652530">WhatsApp</a>
+            </div>
+            
+            <p style="color: #333; font-size: 0.7rem; margin-top: 40px;">© 2026 VARENO EVENTS BD. ALL RIGHTS RESERVED.</p>
+        </footer>
+    </div>
+
+    <script>
+        // 1. Smooth Scroll Init
+        const lenis = new Lenis({
+            duration: 1.4,
+            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+            smoothWheel: true
+        });
+
+        function raf(time) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+        }
+        requestAnimationFrame(raf);
+
+        // Navigation Helper
+        function scrollToContact() {
+            lenis.scrollTo('#contact-section');
+        }
+
+        // 2. GSAP Animations
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Hero Parallax
+        gsap.to("#hero-bg", {
+            yPercent: 20,
+            ease: "none",
+            scrollTrigger: {
+                trigger: ".hero",
+                start: "top top",
+                end: "bottom top",
+                scrub: true
+            }
+        });
+
+        // Logo Fade on Scroll
+        gsap.to(".hero-content", {
+            opacity: 0,
+            y: -50,
+            scrollTrigger: {
+                trigger: ".hero",
+                start: "center center",
+                end: "bottom center",
+                scrub: true
+            }
+        });
+
+        // Image Parallax Effect
+        document.querySelectorAll(".inner-img").forEach(img => {
+            const speed = img.getAttribute('data-speed');
+            gsap.to(img, {
+                yPercent: speed * 100,
+                ease: "none",
+                scrollTrigger: {
+                    trigger: img.parentElement,
+                    start: "top bottom",
+                    end: "bottom top",
+                    scrub: true
+                }
+            });
+        });
+
+        // Content Fade In
+        document.querySelectorAll(".content-box").forEach(box => {
+            gsap.from(box, {
+                opacity: 0,
+                y: 40,
+                duration: 1,
+                scrollTrigger: {
+                    trigger: box,
+                    start: "top 85%",
+                    toggleActions: "play none none reverse"
+                }
+            });
+        });
+    </script>
+</body>
+</html>
