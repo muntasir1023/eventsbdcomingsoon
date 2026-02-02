@@ -325,6 +325,7 @@
             position: relative;
             flex: 1;
             width: 100%;
+            /* Default desktop height */
             height: clamp(350px, 70vh, 800px);
             overflow: hidden;
             border: 1px solid rgba(212, 175, 55, 0.2);
@@ -429,11 +430,41 @@
 
         .socials a:hover { color: var(--brand-gold); }
 
+        /* --- RESPONSIVE ADJUSTMENTS --- */
         @media (max-width: 1024px) {
             .parallax-section, .parallax-section.reverse {
                 flex-direction: column;
                 text-align: center;
                 padding: 80px 8vw;
+                gap: 40px;
+            }
+            
+            /* Make image frame height smaller on tablets/mobile to show more of landscape images */
+            .image-frame {
+                width: 100%;
+                height: 400px;
+                max-height: 50vh;
+            }
+        }
+
+        @media (max-width: 600px) {
+            /* Further reduce height for phones to preserve landscape aspect ratio and prevent cropping */
+            .image-frame {
+                height: 280px; 
+            }
+            
+            /* Reduce the parallax zoom on mobile to show more of the image edges */
+            .inner-img {
+                height: 120%;
+                top: -10%;
+            }
+            
+            .content-box h2 {
+                font-size: 2.2rem;
+            }
+            
+            .content-box p {
+                font-size: 0.95rem;
             }
         }
     </style>
