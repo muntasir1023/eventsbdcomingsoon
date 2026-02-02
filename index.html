@@ -5,13 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     
     <!-- 
-      GOOGLE SEARCH FAVICON GUIDELINES IMPLEMENTATION:
-      - rel="icon" is the standard for Google Search.
-      - apple-touch-icon is used for iOS and supported by Google.
-      - Ensure the image is a square (1:1) and at least 48x48px (the linked .ico fulfills this).
+      GOOGLE SEARCH FAVICON IMPLEMENTATION:
+      Using your GitHub-hosted PNG to replace the default icon in search results.
     -->
-    <link rel="icon" href="https://muntasir1023.github.io/eventsbdcomingsoon/f58df3c2-ee8d-4604-98c0-6550ea3e1a61-md.ico" sizes="any">
-    <link rel="apple-touch-icon" href="https://muntasir1023.github.io/eventsbdcomingsoon/f58df3c2-ee8d-4604-98c0-6550ea3e1a61-md.ico">
+    <link rel="icon" href="https://muntasir1023.github.io/eventsbdcomingsoon/f58df3c2-ee8d-4604-98c0-6550ea3e1a61-md.png" type="image/png">
+    <link rel="apple-touch-icon" href="https://muntasir1023.github.io/eventsbdcomingsoon/f58df3c2-ee8d-4604-98c0-6550ea3e1a61-md.png">
     
     <!-- 1. SEO & Metadata -->
     <title>Vareno Events | Professional Event Management in Bangladesh</title>
@@ -24,7 +22,7 @@
     <meta property="og:description" content="Leading event management services in Bangladesh. Redefining elegance in every occasion.">
     <meta property="og:url" content="https://varenoeventsbd.com">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80&w=1200&auto=format&fit=crop">
+    <meta property="og:image" content="https://muntasir1023.github.io/eventsbdcomingsoon/f58df3c2-ee8d-4604-98c0-6550ea3e1a61-md.png">
     
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Inter:wght@300;400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
@@ -412,19 +410,41 @@
         }
 
         footer {
-            padding: 100px 5vw;
+            padding: 80px 5vw;
             text-align: center;
             background: #000;
             border-top: 1px solid #111;
         }
 
-        .footer-logo {
-            font-family: 'Cinzel', serif;
-            font-size: clamp(2rem, 8vw, 3rem);
+        /* --- UPDATED FOOTER LOGO STYLES --- */
+        .footer-brand-container {
             margin-bottom: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
         }
 
-        .footer-logo .gold { color: var(--brand-gold); }
+        .footer-logo-img {
+            max-width: 120px;
+            height: auto;
+            filter: drop-shadow(0 0 15px rgba(212, 175, 55, 0.2));
+            transition: transform 0.4s ease;
+        }
+
+        .footer-logo-img:hover {
+            transform: scale(1.05);
+        }
+
+        .footer-logo-text {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(1.5rem, 5vw, 2.5rem);
+            letter-spacing: 2px;
+        }
+
+        .footer-logo-text .gold { 
+            color: var(--brand-gold); 
+        }
 
         .socials {
             display: flex;
@@ -472,6 +492,9 @@
             }
             .content-box p {
                 font-size: 0.95rem;
+            }
+            .footer-logo-img {
+                max-width: 100px;
             }
         }
     </style>
@@ -575,8 +598,12 @@
             </section>
 
             <footer id="contact-section">
-                <div class="footer-logo">
-                    <span class="gold">VARENO</span> EVENTS BD
+                <!-- LOGO & TEXT BRANDING IN FOOTER -->
+                <div class="footer-brand-container">
+                    <img src="https://muntasir1023.github.io/eventsbdcomingsoon/f58df3c2-ee8d-4604-98c0-6550ea3e1a61-md.png" alt="Vareno Events Logo" class="footer-logo-img">
+                    <div class="footer-logo-text">
+                        <span class="gold">VARENO</span> EVENTS BD
+                    </div>
                 </div>
                 
                 <div style="margin-bottom: 40px; color: var(--brand-gold); font-size: 1.5rem; font-weight: 600;">
