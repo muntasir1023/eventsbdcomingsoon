@@ -1,6 +1,6 @@
 User-agent: *
 Allow: /
 
-Direct link to your sitemap to help search engines index your site
+Direct link to your sitemap
 
 Sitemap: https://www.google.com/search?q=https://varenoeventsbd.com/sitemap.xml
