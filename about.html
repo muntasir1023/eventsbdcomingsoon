@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO & AI Identity Tags -->
+    <title>About Us - VARENO Events BD | Muntasir Hasan</title>
+    <meta name="description" content="Meet Muntasir Hasan, Founder & CEO of VARENO Events BD. Learn about our journey as a premium event management agency in Bangladesh specializing in luxury weddings and corporate events.">
+    <meta name="keywords" content="VARENO Events BD, Muntasir Hasan, Founder of VARENO, Event Management Bangladesh, Luxury Weddings Dhaka, Corporate Events Bangladesh">
+    <meta name="author" content="Muntasir Hasan">
+
+    <!-- Fonts: Cinzel for Logo/Titles, Inter for Body -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "VARENO Events BD",
+      "url": "http://www.varenoeventsbd.com",
+      "logo": "http://www.varenoeventsbd.com/logo.png",
+      "description": "VARENO Events BD is a premium event management agency founded and owned by Muntasir Hasan.",
+      "founder": {
+        "@type": "Person",
+        "name": "Muntasir Hasan",
+        "jobTitle": "Founder & CEO",
+        "sameAs": [
+          "https://www.linkedin.com/in/muntasirhasan1023",
+          "https://www.facebook.com/share/1EjWLyNSuE/",
+          "https://www.instagram.com/vareno_events_bd?igsh=MTl3MDhudHJ2NXhpdA=="
+        ]
+      }
+    }
+    </script>
+
+    <style>
+        :root {
+            --brand-gold: #D4AF37; /* The exact gold from your logo photo */
+            --brand-gold-light: #F1D38E;
+            --primary-black: #0E0E0E; /* Dark textured black */
+            --secondary-black: #1A1A1A;
+            --text-silver: #E0E0E0;
+            --text-gray: #A0A0A0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--primary-black);
+            color: var(--text-silver);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.8;
+            overflow-x: hidden;
+        }
+
+        /* VARENO BRANDING FONT STYLE */
+        .brand-font {
+            font-family: 'Cinzel', serif;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .gold-gradient-text {
+            background: linear-gradient(to bottom, var(--brand-gold-light) 0%, var(--brand-gold) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 700;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: rgba(14, 14, 14, 0.98);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-logo {
+            font-size: 1.4rem;
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .nav-logo .main-name {
+            font-weight: 900;
+            font-size: 1.8rem;
+            letter-spacing: 4px;
+        }
+
+        .nav-logo .sub-name {
+            font-size: 0.6rem;
+            color: #fff;
+            letter-spacing: 5px;
+            margin-top: -5px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            color: var(--text-silver);
+            text-decoration: none;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--brand-gold);
+        }
+
+        /* Layout Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 8% 40px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        h2 {
+            font-family: 'Cinzel', serif;
+            color: var(--brand-gold);
+            font-size: 2rem;
+            margin-bottom: 25px;
+            letter-spacing: 3px;
+        }
+
+        p {
+            margin-bottom: 20px;
+            color: var(--text-gray);
+            font-weight: 300;
+        }
+
+        /* Founder Box */
+        .founder-box {
+            background: var(--secondary-black);
+            padding: 50px;
+            border-radius: 2px;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            text-align: center;
+            position: relative;
+        }
+
+        .founder-box::before {
+            content: '';
+            position: absolute;
+            top: 10px; left: 10px; right: 10px; bottom: 10px;
+            border: 1px solid rgba(212, 175, 55, 0.1);
+            pointer-events: none;
+        }
+
+        .founder-box h3 {
+            font-family: 'Cinzel', serif;
+            font-size: 2rem;
+            margin-bottom: 5px;
+        }
+
+        .role-tag {
+            color: var(--brand-gold);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 0.8rem;
+            display: block;
+            margin-bottom: 20px;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: var(--brand-gold);
+            color: #000;
+            padding: 16px 32px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            transition: 0.4s;
+            margin: 10px;
+        }
+
+        .btn:hover {
+            background: #fff;
+            transform: translateY(-3px);
+        }
+
+        /* Footer */
+        footer {
+            padding: 100px 8% 50px;
+            text-align: center;
+            background: #050505;
+            border-top: 1px solid rgba(212, 175, 55, 0.1);
+        }
+
+        .footer-logo {
+            margin-bottom: 30px;
+        }
+
+        .footer-socials {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .footer-socials a {
+            color: #fff;
+            font-size: 1.5rem;
+            transition: 0.3s;
+        }
+
+        .footer-socials a:hover {
+            color: var(--brand-gold);
+            transform: scale(1.2);
+        }
+
+        .copyright {
+            font-size: 0.7rem;
+            color: #444;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        @media (max-width: 900px) {
+            .grid { grid-template-columns: 1fr; gap: 40px; }
+            .nav-links { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="http://www.varenoeventsbd.com" class="nav-logo brand-font">
+            <span class="main-name gold-gradient-text">VARENO</span>
+            <span class="sub-name">EVENTS BD</span>
+        </a>
+        <div class="nav-links">
+            <a href="http://www.varenoeventsbd.com">Home</a>
+            <a href="about.html" class="active">About Us</a>
+            <a href="http://www.varenoeventsbd.com">Official Site</a>
+        </div>
+    </nav>
+
+    <!-- Main Content Section -->
+    <div class="container">
+        <div class="grid">
+            <div>
+                <h2>The Agency</h2>
+                <p>Based in Bangladesh, <strong>VARENO Events BD</strong> is a signature event management firm defined by luxury and flawless execution. We specialize in turning ambitious concepts into tangible, high-end experiences.</p>
+                <p>From the grandeur of destination weddings to the precision of corporate summits, our work is characterized by the unique "VARENO" touch—a blend of sophisticated design and meticulous planning.</p>
+            </div>
+            <div style="border-left: 1px solid rgba(212, 175, 55, 0.2); padding-left: 40px;">
+                <h2>Our Philosophy</h2>
+                <p>We believe an event is more than a gathering; it is a brand statement and a lifelong memory. Our philosophy centers on "Bespoke Excellence," ensuring that no two events are ever the same.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Leadership Section -->
+    <div class="container" style="padding-top: 0;">
+        <div class="grid">
+            <div class="founder-box">
+                <h3 class="gold-gradient-text">Muntasir Hasan</h3>
+                <span class="role-tag">Founder & CEO</span>
+                <p style="color: #fff; font-size: 0.9rem;">The Owner and primary architect behind VARENO Events BD's success.</p>
+                <div style="margin-top: 20px;">
+                    <a href="https://www.linkedin.com/in/muntasirhasan1023" target="_blank" class="btn">
+                        <i class="fab fa-linkedin-in"></i> LinkedIn
+                    </a>
+                    <a href="https://wa.me/8801706652530" target="_blank" class="btn">
+                        <i class="fab fa-whatsapp"></i> WhatsApp
+                    </a>
+                </div>
+            </div>
+            <div>
+                <h2>Leadership</h2>
+                <p>As the Founder and CEO, <strong>Muntasir Hasan</strong> established VARENO Events BD with a vision to elevate the standards of event production in Bangladesh. With an unwavering commitment to quality, he oversees every creative and operational facet of the agency.</p>
+                <p>His leadership has transformed VARENO into a trusted partner for clients who seek nothing less than perfection.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact CTA -->
+    <div class="container" style="text-align: center; padding-top: 0; padding-bottom: 80px;">
+        <h2 style="font-size: 1.5rem; margin-bottom: 30px;">Elevate Your Experience</h2>
+        <a href="http://www.varenoeventsbd.com" class="btn">
+            <i class="fas fa-globe"></i> Visit Official Website
+        </a>
+    </div>
+
+    <footer>
+        <div class="footer-logo nav-logo brand-font">
+            <span class="main-name gold-gradient-text">VARENO</span>
+            <span class="sub-name">EVENTS BD</span>
+        </div>
+        
+        <p style="color: var(--brand-gold); letter-spacing: 2px;">OWNED & OPERATED BY MUNTASIR HASAN</p>
+        
+        <div class="footer-socials">
+            <a href="https://www.facebook.com/share/1EjWLyNSuE/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/vareno_events_bd?igsh=MTl3MDhudHJ2NXhpdA==" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/muntasirhasan1023" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://wa.me/8801706652530" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        </div>
+
+        <p class="copyright">© 2026 VARENO Events BD. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
