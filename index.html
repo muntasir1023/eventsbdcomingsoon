@@ -3,286 +3,169 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-    
-    <!-- Google Search Favicon Implementation -->
     <link rel="icon" href="https://muntasir1023.github.io/eventsbdcomingsoon/f58df3c2-ee8d-4604-98c0-6550ea3e1a61-md.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="https://muntasir1023.github.io/eventsbdcomingsoon/f58df3c2-ee8d-4604-98c0-6550ea3e1a61-md.png" type="image/png" sizes="48x48">
     <link rel="icon" href="https://muntasir1023.github.io/eventsbdcomingsoon/f58df3c2-ee8d-4604-98c0-6550ea3e1a61-md.png" type="image/png" sizes="192x192">
+    <link rel="icon" href="https://muntasir1023.github.io/eventsbdcomingsoon/f58df3c2-ee8d-4604-98c0-6550ea3e1a61-md.png" type="image/png" sizes="512x512">
     <link rel="apple-touch-icon" href="https://muntasir1023.github.io/eventsbdcomingsoon/f58df3c2-ee8d-4604-98c0-6550ea3e1a61-md.png">
-    
-    <!-- SEO & Metadata -->
     <title>Vareno Events BD | Professional Event Management in Bangladesh</title>
-    <meta name="description" content="Vareno Events BD provides premier event planning and management services in Bangladesh. Owned by Muntasir Hasan. From royal weddings to strategic corporate events.">
-    <meta name="keywords" content="Event Management, Bangladesh, Wedding Planner, Corporate Events, Vareno Events BD, Dhaka Events, Muntasir Hasan">
-    <link rel="canonical" href="https://varenoeventsbd.com/" />
-
-    <!-- AI & Search Engine Identity (JSON-LD) -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "VARENO Events BD",
-      "url": "https://varenoeventsbd.com",
-      "logo": "https://muntasir1023.github.io/eventsbdcomingsoon/f58df3c2-ee8d-4604-98c0-6550ea3e1a61-md.png",
-      "founder": {
-        "@type": "Person",
-        "name": "Muntasir Hasan",
-        "jobTitle": "Founder & CEO"
-      },
-      "sameAs": [
-        "https://www.facebook.com/share/1EjWLyNSuE/",
-        "https://www.instagram.com/vareno_events_bd",
-        "https://www.linkedin.com/in/muntasirhasan1023"
-      ]
-    }
-    </script>
-
-    <!-- Social Media Tags (Open Graph) -->
+    <meta name="description" content="Vareno Events BD provides premier event planning and management services in Bangladesh. From royal weddings to strategic corporate events.">
+    <meta name="keywords" content="Event Management, Bangladesh, Wedding Planner, Corporate Events, Vareno Events BD, Dhaka Events">
+    <link rel="canonical" href="https://varenoeventsbd.com/">
     <meta property="og:site_name" content="Vareno Events BD">
     <meta property="og:title" content="Vareno Events BD - Crafting Perfect Moments">
-    <meta property="og:description" content="Leading event management services in Bangladesh. Owned by Muntasir Hasan.">
+    <meta property="og:description" content="Leading event management services in Bangladesh. Redefining elegance in every occasion.">
     <meta property="og:url" content="https://varenoeventsbd.com">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://muntasir1023.github.io/eventsbdcomingsoon/f58df3c2-ee8d-4604-98c0-6550ea3e1a61-md.png">
-    
-    <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Inter:wght@300;400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
-    
-    <!-- GSAP & Lenis -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="https://unpkg.com/@studio-freight/lenis@1.0.33/dist/lenis.min.js"></script>
-
     <style>
-        :root {
-            --brand-gold: #D4AF37; 
-            --brand-gold-bright: #F5E6A5;
-            --bg-dark: #080808;
-            --text-white: #FFFFFF;
-        }
-
-        html.lenis { height: auto; }
-        .lenis-smooth { scroll-behavior: auto !important; }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
-
-        body {
-            background-color: var(--bg-dark);
-            color: var(--text-white);
-            font-family: 'Inter', sans-serif;
-            overflow-x: hidden;
-            -webkit-font-smoothing: antialiased;
-            width: 100%;
-        }
-
-        /* --- NEW NAVIGATION --- */
+        :root {--brand-gold: #D4AF37; --brand-gold-bright: #F5E6A5; --bg-dark: #080808; --text-white: #FFFFFF;}
+        html.lenis {height: auto;}
+        .lenis-smooth {scroll-behavior: auto !important;}
+        * {margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent;}
+        body {background-color: var(--bg-dark); color: var(--text-white); font-family: 'Inter', sans-serif; overflow-x: hidden; -webkit-font-smoothing: antialiased; width: 100%;}
+        
+        /* Navbar Styles */
         nav {
             position: fixed;
             top: 0;
             width: 100%;
-            padding: 25px 5vw;
+            padding: 20px 5vw;
             display: flex;
             justify-content: space-between;
             align-items: center;
             z-index: 1000;
             background: linear-gradient(to bottom, rgba(0,0,0,0.8) 0%, transparent 100%);
-            backdrop-filter: blur(5px);
         }
+        .nav-brand {
+            font-family: 'Cinzel', serif;
+            font-weight: 700;
+            letter-spacing: 2px;
+            font-size: 1.2rem;
+        }
+        .nav-brand .gold { color: var(--brand-gold); }
+        .nav-brand .white { color: var(--text-white); margin-left: 8px; font-size: 0.8em; letter-spacing: 4px; }
 
         .nav-links {
             display: flex;
-            gap: 40px;
+            gap: 30px;
         }
-
         .nav-links a {
-            color: white;
+            color: var(--text-white);
             text-decoration: none;
-            font-size: 0.75rem;
             text-transform: uppercase;
-            letter-spacing: 3px;
+            font-size: 0.75rem;
+            letter-spacing: 2px;
             font-weight: 600;
             transition: color 0.3s;
         }
-
         .nav-links a:hover {
             color: var(--brand-gold);
         }
 
-        .nav-links a.highlight {
-            border: 1px solid var(--brand-gold);
-            padding: 8px 15px;
-            margin-top: -8px;
-            border-radius: 2px;
-        }
-
-        /* --- HERO SECTION --- */
-        #hero-section {
-            height: 100vh;
-            width: 100%;
-            position: relative;
-            overflow: hidden;
-            display: flex;
-            flex-direction: column; 
-            justify-content: center; 
-        }
-
-        .bg-media {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 0;
-            background: #000;
-        }
-
-        .bg-media img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            opacity: 0.4; 
-        }
-
-        .overlay-gradient {
-            position: absolute;
-            inset: 0;
-            background: radial-gradient(circle, rgba(0,0,0,0.2) 0%, rgba(8,8,8,0.9) 100%);
-        }
-
-        .hero-content-wrapper {
-            position: relative;
-            z-index: 10;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 0 20px;
-            width: 100%;
-            flex-grow: 1; 
-            margin-top: 60px;
-        }
-
-        .coming-soon-badge {
-            background: rgba(212, 175, 55, 0.1);
-            border: 1px solid var(--brand-gold);
-            padding: 8px 20px;
-            border-radius: 50px;
-            color: var(--brand-gold);
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 4px;
-            margin-bottom: 30px;
-            font-weight: 700;
-            box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .pulse-dot {
-            width: 6px;
-            height: 6px;
-            background: var(--brand-gold);
-            border-radius: 50%;
-            animation: pulse 1.5s infinite;
-        }
-
-        @keyframes pulse {
-            0% { transform: scale(1); opacity: 1; }
-            100% { transform: scale(2.5); opacity: 0; }
-        }
-
-        .agency-name h1 {
-            font-family: 'Cinzel', serif;
-            font-size: clamp(3rem, 10vw, 8rem);
-            line-height: 1;
+        #hero-section {height: 100vh; width: 100%; position: relative; overflow: hidden; display: flex; flex-direction: column; justify-content: center;}
+        .bg-media {position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; background: #000;}
+        .bg-media img {width: 100%; height: 100%; object-fit: cover; opacity: 0.4;}
+        .overlay-gradient {position: absolute; inset: 0; background: radial-gradient(circle, rgba(0,0,0,0.2) 0%, rgba(8,8,8,0.9) 100%);}
+        .hero-content-wrapper {position: relative; z-index: 10; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 0 20px; width: 100%; flex-grow: 1; margin-bottom: 120px;}
+        .coming-soon-badge {background: rgba(212, 175, 55, 0.1); border: 1px solid var(--brand-gold); padding: 8px 20px; border-radius: 50px; color: var(--brand-gold); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 4px; margin-bottom: 30px; font-weight: 700; box-shadow: 0 0 15px rgba(212, 175, 55, 0.3); display: flex; align-items: center; gap: 10px;}
+        .pulse-dot {width: 6px; height: 6px; background: var(--brand-gold); border-radius: 50%; animation: pulse 1.5s infinite;}
+        @keyframes pulse {0% {transform: scale(1); opacity: 1;} 100% {transform: scale(2.5); opacity: 0;}}
+        
+        .agency-name {margin-bottom: 20px; display: flex; flex-direction: column; align-items: center;}
+        .agency-name h1 {font-family: 'Cinzel', serif; font-size: clamp(2.5rem, 8vw, 7rem); line-height: 1.1; margin: 0; white-space: nowrap;}
+        .agency-name h1 .gold {
             color: var(--brand-gold);
             text-shadow: 0 0 30px rgba(212, 175, 55, 0.4);
-            margin: 0;
             background: linear-gradient(90deg, #D4AF37 0%, #F5E6A5 50%, #D4AF37 100%);
             background-size: 200% auto;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             animation: shine 4s linear infinite;
         }
-
-        @keyframes shine { to { background-position: 200% center; } }
-
-        .agency-name h2 {
+        .agency-name h1 .white {
+            color: var(--text-white);
+            -webkit-text-fill-color: var(--text-white);
+            font-size: 0.45em;
+            letter-spacing: clamp(10px, 1.5vw, 20px);
+            display: block;
+            margin-top: 10px;
             font-family: 'Montserrat', sans-serif;
-            font-size: clamp(0.8rem, 2vw, 1.5rem);
-            letter-spacing: clamp(5px, 1.5vw, 10px);
-            color: rgba(255, 255, 255, 0.9);
-            text-transform: uppercase;
-            margin-top: 5px;
+            font-weight: 400;
         }
+        @keyframes shine {to {background-position: 200% center;}}
 
-        /* Countdown & Experience */
-        .glass-panel {
-            background: rgba(20, 20, 20, 0.6);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(212, 175, 55, 0.2);
-            border-radius: 12px;
-            padding: 15px 25px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            min-width: 100px;
+        .reveal-subtitle {color: var(--brand-gold); letter-spacing: 0.3em; font-size: clamp(0.7rem, 1.2vw, 0.9rem); text-transform: uppercase; margin-top: 30px; margin-bottom: 10px; border-bottom: 1px solid var(--brand-gold); padding-bottom: 5px; display: inline-block;}
+        .reveal-title {font-family: 'Cinzel', serif; font-size: clamp(2rem, 5vw, 4rem); font-weight: 700; margin-bottom: 10px; text-align: center; line-height: 1.1; color: white;}
+        .hero-bottom-section {position: absolute; bottom: 0; left: 0; width: 100%; padding-top: 40px; padding-bottom: clamp(20px, 4vh, 40px); z-index: 10; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 100%);}
+        .countdown-grid {display: flex; flex-wrap: wrap; justify-content: center; gap: clamp(10px, 3vw, 30px); margin-bottom: 20px;}
+        .glass-panel {background: rgba(20, 20, 20, 0.6); backdrop-filter: blur(12px); border: 1px solid rgba(212, 175, 55, 0.2); border-radius: 12px; padding: clamp(10px, 2vw, 15px) clamp(15px, 3vw, 25px); display: flex; flex-direction: column; align-items: center; min-width: clamp(70px, 10vw, 110px); transition: transform 0.3s ease;}
+        .glass-panel:hover {transform: translateY(-5px); border-color: rgba(212, 175, 55, 0.5);}
+        .glass-panel span.time {font-size: clamp(1.5rem, 3vw, 2.5rem); font-weight: 700; font-family: 'Inter', monospace; color: var(--brand-gold); line-height: 1;}
+        .glass-panel span.label {font-size: 0.6rem; text-transform: uppercase; letter-spacing: 2px; color: #aaa; margin-top: 6px;}
+        .scroll-indicator {font-size: 0.7rem; letter-spacing: 4px; opacity: 0.6; text-transform: uppercase; animation: bounce 2s infinite; margin-top: 10px;}
+        @keyframes bounce {0%, 20%, 50%, 80%, 100% {transform: translateY(0);} 40% {transform: translateY(-10px);} 60% {transform: translateY(-5px);}}
+        
+        .expertise-section {padding: clamp(60px, 10vh, 120px) 5vw; background: #050505; text-align: center; position: relative; z-index: 5;}
+        .expertise-title {font-family: 'Cinzel', serif; font-size: clamp(2rem, 8vw, 3.5rem); color: var(--brand-gold); margin-bottom: 60px;}
+        .expertise-grid {display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; max-width: 1200px; margin: 0 auto;}
+        .expertise-card {padding: 40px 30px; border: 1px solid rgba(212, 175, 55, 0.1); transition: all 0.4s ease; background: rgba(255,255,255,0.02); text-align: left; position: relative; overflow: hidden;}
+        .expertise-card:hover {border-color: var(--brand-gold); background: rgba(212, 175, 55, 0.05); transform: translateY(-5px);}
+        .expertise-card h3 {font-family: 'Cinzel', serif; color: var(--brand-gold); margin-bottom: 15px; font-size: 1.4rem;}
+        .expertise-card p {font-size: 0.95rem; color: #aaa; line-height: 1.6;}
+        
+        .parallax-section {padding: 10vh 5vw; display: flex; align-items: center; justify-content: space-between; min-height: 100vh; gap: 5vw; max-width: 1400px; margin: 0 auto;}
+        .parallax-section.reverse {flex-direction: row-reverse;}
+        .image-frame {position: relative; flex: 1; width: 100%; height: clamp(350px, 70vh, 800px); overflow: hidden; border: 1px solid rgba(212, 175, 55, 0.2); box-shadow: 0 20px 50px rgba(0,0,0,0.5);}
+        .inner-img {position: absolute; top: -25%; left: 0; width: 100%; height: 150%; background-size: cover; background-position: center; will-change: transform;}
+        .content-box {flex: 0.8; padding: 20px;}
+        .content-box h2 {font-family: 'Cinzel', serif; font-size: clamp(2rem, 6vw, 4rem); color: var(--brand-gold); margin-bottom: 25px; line-height: 1.1;}
+        .content-box p {font-size: 1.1rem; color: #ccc; line-height: 1.8; margin-bottom: 35px; max-width: 550px;}
+        .date-badge {display: inline-block; padding: 10px 24px; border: 1px solid var(--brand-gold); color: var(--brand-gold); font-weight: 700; letter-spacing: 2px; margin-bottom: 25px; text-transform: uppercase; font-size: 0.8rem;}
+        
+        .btn-group {display: flex; gap: 20px; flex-wrap: wrap;}
+        .gold-btn {display: inline-block; padding: 20px 50px; background: transparent; border: 1px solid var(--brand-gold); color: var(--brand-gold); text-decoration: none; text-transform: uppercase; font-weight: 700; letter-spacing: 2px; transition: all 0.4s ease; cursor: pointer;}
+        .gold-btn:hover {background: var(--brand-gold); color: black; box-shadow: 0 0 25px rgba(212, 175, 55, 0.5);}
+        .outline-btn {display: inline-block; padding: 20px 50px; background: transparent; border: 1px solid rgba(255,255,255,0.3); color: white; text-decoration: none; text-transform: uppercase; font-weight: 700; letter-spacing: 2px; transition: all 0.4s ease;}
+        .outline-btn:hover {border-color: white; background: rgba(255,255,255,0.1);}
+
+        footer {padding: 80px 5vw; text-align: center; background: #000; border-top: 1px solid #111;}
+        .footer-brand-container {margin-bottom: 40px; display: flex; flex-direction: column; align-items: center; gap: 15px;}
+        .footer-logo-img {max-width: 120px; height: auto; filter: drop-shadow(0 0 15px rgba(212, 175, 55, 0.2)); transition: transform 0.4s ease;}
+        .footer-logo-img:hover {transform: scale(1.05);}
+        .footer-logo-text {font-family: 'Cinzel', serif; font-size: clamp(1.5rem, 5vw, 2.5rem); letter-spacing: 2px;}
+        .footer-logo-text .gold {color: var(--brand-gold);}
+        .footer-logo-text .white {color: var(--text-white); margin-left: 10px; font-size: 1em; letter-spacing: 2px; text-transform: uppercase;}
+        
+        .socials {display: flex; justify-content: center; gap: 30px; margin-bottom: 40px; flex-wrap: wrap;}
+        .socials a {color: white; text-decoration: none; font-size: 0.85rem; letter-spacing: 2px; text-transform: uppercase; transition: color 0.3s;}
+        .socials a:hover {color: var(--brand-gold);}
+        
+        @media (max-width: 1024px) {
+            nav {padding: 15px 5vw;}
+            .parallax-section, .parallax-section.reverse {flex-direction: column; text-align: center; padding: 80px 8vw; gap: 40px;} 
+            .image-frame {width: 100%; height: 400px; max-height: 50vh;}
+            .btn-group {justify-content: center;}
         }
-
-        .glass-panel span.time { font-size: 2.5rem; color: var(--brand-gold); font-weight: 700; }
-        .glass-panel span.label { font-size: 0.6rem; text-transform: uppercase; color: #aaa; margin-top: 5px; }
-
-        .expertise-section { padding: 100px 5vw; background: #050505; text-align: center; }
-        .expertise-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; max-width: 1200px; margin: 0 auto; }
-        .expertise-card { padding: 40px; border: 1px solid rgba(212, 175, 55, 0.15); background: rgba(255,255,255,0.02); text-align: left; }
-        .expertise-card h3 { font-family: 'Cinzel', serif; color: var(--brand-gold); margin-bottom: 15px; }
-
-        .parallax-section { padding: 10vh 5vw; display: flex; align-items: center; min-height: 100vh; gap: 5vw; max-width: 1400px; margin: 0 auto; }
-        .image-frame { flex: 1; height: 600px; overflow: hidden; border: 1px solid rgba(212, 175, 55, 0.2); position: relative; }
-        .inner-img { position: absolute; top: -25%; width: 100%; height: 150%; background-size: cover; background-position: center; }
-        .content-box { flex: 0.8; }
-        .content-box h2 { font-family: 'Cinzel', serif; font-size: 3.5rem; color: var(--brand-gold); margin-bottom: 20px; }
-
-        .gold-btn {
-            display: inline-block;
-            padding: 18px 45px;
-            border: 1px solid var(--brand-gold);
-            color: var(--brand-gold);
-            text-decoration: none;
-            text-transform: uppercase;
-            font-weight: 700;
-            letter-spacing: 2px;
-            transition: 0.4s;
-            background: transparent;
-            cursor: pointer;
-        }
-
-        .gold-btn:hover { background: var(--brand-gold); color: black; box-shadow: 0 0 20px rgba(212, 175, 55, 0.4); }
-
-        footer { padding: 80px 5vw; text-align: center; background: #000; border-top: 1px solid #111; }
-        .socials { display: flex; justify-content: center; gap: 30px; margin-top: 40px; margin-bottom: 40px; }
-        .socials a { color: white; text-decoration: none; font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase; }
-        .socials a:hover { color: var(--brand-gold); }
-
-        @media (max-width: 768px) {
-            .nav-links { display: none; }
-            .parallax-section { flex-direction: column; text-align: center; }
-            .image-frame { width: 100%; height: 350px; }
+        @media (max-width: 600px) {
+            .image-frame {height: 280px;} 
+            .inner-img {height: 120%; top: -10%;} 
+            .content-box h2 {font-size: 2.2rem;} 
+            .content-box p {font-size: 0.95rem;} 
+            .footer-logo-img {max-width: 100px;}
+            .nav-brand .white { display: none; } /* Hide white part on very small mobile nav for space */
         }
     </style>
 </head>
 <body>
-
     <nav>
-        <div class="nav-logo" style="font-family: 'Cinzel'; font-weight: 900; letter-spacing: 2px;">
-            <span style="color: var(--brand-gold);">VARENO</span>
-        </div>
+        <div class="nav-brand"><span class="gold">VARENO</span><span class="white">EVENTS BD</span></div>
         <div class="nav-links">
-            <a href="index.html">Home</a>
             <a href="about.html">About Us</a>
-            <a href="about.html" class="highlight">Founder</a>
-            <a href="#contact-section">Contact</a>
         </div>
     </nav>
 
@@ -290,81 +173,90 @@
         <div id="smooth-content">
             <section id="hero-section">
                 <div class="bg-media">
-                    <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80&w=2000&auto=format&fit=crop" alt="Luxury Event">
+                    <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80&w=2000&auto=format&fit=crop" alt="Luxury Hall Hero">
                     <div class="overlay-gradient"></div>
                 </div>
-
                 <div class="hero-content-wrapper">
                     <div class="coming-soon-badge"><div class="pulse-dot"></div>Coming Soon</div>
-                    <div class="agency-name">
-                        <h1>VARENO</h1>
-                        <h2>Events BD</h2>
-                    </div>
-                    <p style="color: var(--brand-gold); letter-spacing: 5px; text-transform: uppercase; margin-top: 20px; font-size: 0.8rem;">Owned by Muntasir Hasan</p>
-                    <h2 style="font-family: 'Cinzel'; font-size: 3rem; margin-top: 10px;">GRAND OPENING</h2>
+                    
+                    <p class="reveal-subtitle">Redefining Elegance</p>
+                    <h2 class="reveal-title" style="margin-bottom: 30px;">GRAND OPENING</h2>
+                    <a href="about.html" class="outline-btn" style="padding: 15px 40px; font-size: 0.7rem;">Discover Our Story</a>
                 </div>
-
-                <div style="display: flex; justify-content: center; gap: 20px; padding-bottom: 50px;">
-                    <div class="glass-panel"><span id="days" class="time">00</span><span class="label">Days</span></div>
-                    <div class="glass-panel"><span id="hours" class="time">00</span><span class="label">Hours</span></div>
-                    <div class="glass-panel"><span id="minutes" class="time">00</span><span class="label">Mins</span></div>
-                    <div class="glass-panel"><span id="seconds" class="time">00</span><span class="label">Secs</span></div>
+                <div class="hero-bottom-section">
+                    <div class="countdown-grid" id="countdown-container">
+                        <div class="glass-panel"><span id="days" class="time">00</span><span class="label">Days</span></div>
+                        <div class="glass-panel"><span id="hours" class="time">00</span><span class="label">Hours</span></div>
+                        <div class="glass-panel"><span id="minutes" class="time">00</span><span class="label">Minutes</span></div>
+                        <div class="glass-panel"><span id="seconds" class="time">00</span><span class="label">Seconds</span></div>
+                    </div>
+                    <div class="scroll-indicator">Scroll to Explore</div>
                 </div>
             </section>
 
             <section class="expertise-section">
-                <h2 style="font-family: 'Cinzel'; color: var(--brand-gold); font-size: 3rem; margin-bottom: 50px;">Signature Services</h2>
+                <h2 class="expertise-title">Our Expertise</h2>
                 <div class="expertise-grid">
-                    <div class="expertise-card">
-                        <h3>Event Management</h3>
-                        <p>Complete conceptualization and operational precision for high-stakes events.</p>
-                    </div>
-                    <div class="expertise-card">
-                        <h3>Royal Weddings</h3>
-                        <p>Bespoke wedding curation that defines elegance and luxury in Bangladesh.</p>
-                    </div>
-                    <div class="expertise-card">
-                        <h3>Corporate Gala</h3>
-                        <p>Strategic events designed to elevate your brand presence and corporate image.</p>
-                    </div>
+                    <div class="expertise-card"><h3>Event Management</h3><p>From conceptualization to execution, we handle every detail with precision.</p></div>
+                    <div class="expertise-card"><h3>Wedding Planning</h3><p>Creating magical moments for your special day with bespoke decor.</p></div>
+                    <div class="expertise-card"><h3>Corporate Events</h3><p>Professional grand openings and gala dinners reflecting your brand's excellence.</p></div>
+                    <div class="expertise-card"><h3>Brand Activation</h3><p>Innovative marketing events designed to create lasting impressions.</p></div>
                 </div>
             </section>
 
             <section class="parallax-section">
                 <div class="image-frame">
-                    <div class="inner-img" style="background-image: url('https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=2000');" data-speed="-0.1"></div>
+                    <div class="inner-img" style="background-image: url('https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=2000');" data-speed="-0.15"></div>
                 </div>
                 <div class="content-box">
-                    <h2>Meet the Founder</h2>
-                    <p>VARENO Events BD is driven by the vision of Muntasir Hasan, focusing on bespoke excellence and uncompromised quality.</p>
-                    <a href="about.html" class="gold-btn">Learn More About Us</a>
+                    <div class="date-badge">Summer 2026</div>
+                    <h2>Royal Wedding Curation</h2>
+                    <p>The definitive interface for luxury wedding management in Bangladesh. We handle logistical precision with an artistic touch.</p>
+                    <div class="btn-group">
+                        <button onclick="scrollToContact()" class="gold-btn">Pre-Book</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="parallax-section reverse">
+                <div class="image-frame">
+                    <div class="inner-img" style="background-image: url('https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=2000&auto=format&fit=crop');" data-speed="0.12"></div>
+                </div>
+                <div class="content-box">
+                    <h2>Strategic Occasions</h2>
+                    <p>Meticulous planning for conferences and grand openings. Elevating your brand through execution and sophistication.</p>
+                    <div class="btn-group">
+                        <button onclick="scrollToContact()" class="gold-btn">Partner With Us</button>
+                    </div>
                 </div>
             </section>
 
             <footer id="contact-section">
-                <div style="margin-bottom: 30px;">
-                    <img src="./f58df3c2-ee8d-4604-98c0-6550ea3e1a61-md.png" alt="Logo" style="max-width: 100px;">
-                    <h3 style="font-family: 'Cinzel'; margin-top: 10px; color: var(--brand-gold);">VARENO <span style="color: white;">EVENTS BD</span></h3>
-                    <p style="font-size: 0.7rem; letter-spacing: 3px; margin-top: 5px;">A MUNTASIR HASAN VENTURE</p>
+                <div class="footer-brand-container">
+                    <img src="https://muntasir1023.github.io/eventsbdcomingsoon/f58df3c2-ee8d-4604-98c0-6550ea3e1a61-md.png" alt="Vareno Events BD Logo" class="footer-logo-img">
+                    <div class="footer-logo-text">
+                        <span class="gold">VARENO</span> <span class="white">EVENTS BD</span>
+                    </div>
                 </div>
-
+                <div style="margin-bottom: 40px; color: var(--brand-gold); font-size: 1.5rem; font-weight: 600;">
+                    <a href="tel:+8801706652530" style="color: inherit; text-decoration: none;">01706652530</a>
+                </div>
                 <div class="socials">
-                    <a href="about.html">About Us</a>
                     <a href="https://www.facebook.com/share/1EjWLyNSuE/" target="_blank">Facebook</a>
                     <a href="https://www.instagram.com/vareno_events_bd" target="_blank">Instagram</a>
+                    <a href="https://www.linkedin.com/in/muntasirhasan1023" target="_blank">LinkedIn</a>
                     <a href="https://wa.me/8801706652530" target="_blank">WhatsApp</a>
                 </div>
-                
-                <p style="color: #444; font-size: 0.7rem;">© 2026 VARENO EVENTS BD. ALL RIGHTS RESERVED.</p>
+                <p style="color: #444; font-size: 0.75rem; letter-spacing: 1px;">© 2026 VARENO EVENTS BD. ALL RIGHTS RESERVED.</p>
             </footer>
         </div>
     </div>
-
     <script>
-        const lenis = new Lenis();
-        function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
+        const lenis = new Lenis({duration: 1.2, easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), smoothWheel: true});
+        function raf(time) {lenis.raf(time); requestAnimationFrame(raf);}
         requestAnimationFrame(raf);
-
+        function scrollToContact() {lenis.scrollTo('#contact-section', {duration: 2});}
+        
         const launchDate = new Date("June 1, 2026 00:00:00").getTime();
         setInterval(() => {
             const now = new Date().getTime();
@@ -377,12 +269,15 @@
         }, 1000);
 
         gsap.registerPlugin(ScrollTrigger);
+        gsap.from(".hero-content-wrapper > *", {y: 30, opacity: 0, duration: 1.5, stagger: 0.2, ease: "power3.out", delay: 0.2});
+        
         document.querySelectorAll(".inner-img").forEach(img => {
-            gsap.to(img, {
-                yPercent: 30,
-                ease: "none",
-                scrollTrigger: { trigger: img.parentElement, scrub: true }
-            });
+            const speed = parseFloat(img.getAttribute('data-speed'));
+            gsap.to(img, {yPercent: speed * 60, ease: "none", scrollTrigger: {trigger: img.parentElement, start: "top bottom", end: "bottom top", scrub: true}});
+        });
+
+        gsap.utils.toArray(".expertise-card, .content-box").forEach(el => {
+            gsap.from(el, {opacity: 0, y: 40, duration: 1, scrollTrigger: {trigger: el, start: "top 92%"}});
         });
     </script>
 </body>
