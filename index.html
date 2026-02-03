@@ -3,25 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <!-- Favicon and App Icons -->
     <link rel="icon" href="https://muntasir1023.github.io/eventsbdcomingsoon/f58df3c2-ee8d-4604-98c0-6550ea3e1a61-md.png" type="image/png" sizes="32x32">
     <link rel="icon" href="https://muntasir1023.github.io/eventsbdcomingsoon/f58df3c2-ee8d-4604-98c0-6550ea3e1a61-md.png" type="image/png" sizes="48x48">
     <link rel="icon" href="https://muntasir1023.github.io/eventsbdcomingsoon/f58df3c2-ee8d-4604-98c0-6550ea3e1a61-md.png" type="image/png" sizes="192x192">
     <link rel="icon" href="https://muntasir1023.github.io/eventsbdcomingsoon/f58df3c2-ee8d-4604-98c0-6550ea3e1a61-md.png" type="image/png" sizes="512x512">
     <link rel="apple-touch-icon" href="https://muntasir1023.github.io/eventsbdcomingsoon/f58df3c2-ee8d-4604-98c0-6550ea3e1a61-md.png">
+    
     <title>Vareno Events BD | Professional Event Management in Bangladesh</title>
     <meta name="description" content="Vareno Events BD provides premier event planning and management services in Bangladesh. From royal weddings to strategic corporate events.">
     <meta name="keywords" content="Event Management, Bangladesh, Wedding Planner, Corporate Events, Vareno Events BD, Dhaka Events">
     <link rel="canonical" href="https://varenoeventsbd.com/">
+    
+    <!-- Open Graph Metadata -->
     <meta property="og:site_name" content="Vareno Events BD">
     <meta property="og:title" content="Vareno Events BD - Crafting Perfect Moments">
     <meta property="og:description" content="Leading event management services in Bangladesh. Redefining elegance in every occasion.">
     <meta property="og:url" content="https://varenoeventsbd.com">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://muntasir1023.github.io/eventsbdcomingsoon/f58df3c2-ee8d-4604-98c0-6550ea3e1a61-md.png">
+    
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Inter:wght@300;400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="https://unpkg.com/@studio-freight/lenis@1.0.33/dist/lenis.min.js"></script>
+    
     <style>
         :root {--brand-gold: #D4AF37; --brand-gold-bright: #F5E6A5; --bg-dark: #080808; --text-white: #FFFFFF;}
         html.lenis {height: auto;}
@@ -45,8 +51,10 @@
             font-family: 'Cinzel', serif;
             font-weight: 700;
             letter-spacing: 2px;
-            font-size: clamp(0.9rem, 4vw, 1.2rem);
+            font-size: clamp(0.85rem, 3.5vw, 1.2rem);
             white-space: nowrap;
+            display: flex;
+            align-items: center;
         }
         .nav-brand .gold { color: var(--brand-gold); }
         .nav-brand .white { color: var(--text-white); margin-left: 8px; font-size: 0.8em; letter-spacing: 2px; }
@@ -79,6 +87,7 @@
         
         .reveal-subtitle {color: var(--brand-gold); letter-spacing: 0.3em; font-size: clamp(0.7rem, 1.2vw, 0.9rem); text-transform: uppercase; margin-top: 30px; margin-bottom: 10px; border-bottom: 1px solid var(--brand-gold); padding-bottom: 5px; display: inline-block;}
         .reveal-title {font-family: 'Cinzel', serif; font-size: clamp(2rem, 5vw, 4rem); font-weight: 700; margin-bottom: 10px; text-align: center; line-height: 1.1; color: white;}
+        
         .hero-bottom-section {position: absolute; bottom: 0; left: 0; width: 100%; padding-top: 40px; padding-bottom: clamp(20px, 4vh, 40px); z-index: 10; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 100%);}
         .countdown-grid {display: flex; flex-wrap: wrap; justify-content: center; gap: clamp(10px, 3vw, 30px); margin-bottom: 20px;}
         .glass-panel {background: rgba(20, 20, 20, 0.6); backdrop-filter: blur(12px); border: 1px solid rgba(212, 175, 55, 0.2); border-radius: 12px; padding: clamp(10px, 2vw, 15px) clamp(15px, 3vw, 25px); display: flex; flex-direction: column; align-items: center; min-width: clamp(70px, 10vw, 110px); transition: transform 0.3s ease;}
@@ -135,14 +144,17 @@
             .content-box h2 {font-size: 2.2rem;} 
             .content-box p {font-size: 0.95rem;} 
             .footer-logo-img {max-width: 100px;}
-            /* Removed the display: none for nav brand white part to fix the "VARENo" issue */
-            .nav-brand .white { letter-spacing: 1px; margin-left: 4px; }
+            /* Fix for the BRAND text on mobile */
+            .nav-brand .white { display: inline-block !important; letter-spacing: 1px; margin-left: 5px; }
         }
     </style>
 </head>
 <body>
     <nav>
-        <div class="nav-brand"><span class="gold">VARENO</span> <span class="white">EVENTS BD</span></div>
+        <div class="nav-brand">
+            <span class="gold">VARENO</span> 
+            <span class="white">EVENTS BD</span>
+        </div>
         <div class="nav-links">
             <a href="about.html">About</a>
         </div>
@@ -212,7 +224,7 @@
 
             <footer id="contact-section">
                 <div class="footer-brand-container">
-                    <img src="https://muntasir1023.github.io/eventsbdcomingsoon/f58df3c2-ee8d-4604-98c0-6550ea3e1a61-md.png" alt="Vareno Events BD Logo" class="footer-logo-img">
+                    <img src="https://muntasir1023.github.io/eventsbdcomingsoon/f58df3c2-ee8d-4604-98c0-6550ea3e1a61-md.png" alt="Vareno Events BD Logo" class="footer-logo-img" onerror="this.style.display='none'">
                     <div class="footer-logo-text">
                         <span class="gold">VARENO</span> <span class="white">EVENTS BD</span>
                     </div>
