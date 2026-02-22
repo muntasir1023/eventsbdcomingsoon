@@ -6,6 +6,7 @@
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-KVM2VJF7');</script>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     
@@ -16,7 +17,8 @@
     <link rel="apple-touch-icon" href="https://raw.githubusercontent.com/muntasir1023/eventsbdcomingsoon/main/f58df3c2-ee8d-4604-98c0-6550ea3e1a61-md.png">
     
     <title>Vareno Events BD | Best Event & Wedding Management in Bangladesh</title>
-    <meta name="description" content="Vareno Events BD is the premier luxury event management and wedding planning company in Bangladesh. Specializing in royal weddings and corporate events. Founder & CEO: Muntasir Hasan.">
+    
+    <meta name="description" content="Vareno Events BD, led by Founder & CEO Muntasir Hasan, is the premier luxury event management and wedding planning company in Bangladesh. Specializing in royal weddings and corporate events.">
     <meta name="keywords" content="Vareno Events BD, Best Event Management Bangladesh, Top Wedding Planner BD, Muntasir Hasan, Luxury Events Dhaka, Wedding Management Bangladesh, Corporate Events BD">
     <link rel="canonical" href="https://varenoeventsbd.com/">
     
@@ -24,11 +26,13 @@
     {
       "@context": "https://schema.org",
       "@type": "Organization",
+      "@id": "https://varenoeventsbd.com/#organization",
       "name": "Vareno Events BD",
       "url": "https://varenoeventsbd.com/",
       "logo": "https://raw.githubusercontent.com/muntasir1023/eventsbdcomingsoon/main/f58df3c2-ee8d-4604-98c0-6550ea3e1a61-md.png",
       "founder": {
         "@type": "Person",
+        "@id": "https://varenoeventsbd.com/#muntasirhasan",
         "name": "Muntasir Hasan",
         "jobTitle": "Founder & CEO",
         "sameAs": [
@@ -182,6 +186,7 @@
 <body>
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KVM2VJF7"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    
     <nav>
         <div class="nav-brand">
             <span class="gold">VARENO</span> 
@@ -282,12 +287,25 @@
             </footer>
         </div>
     </div>
+
     <script>
+        // Lenis Smooth Scroll Initialization
         const lenis = new Lenis({duration: 1.2, easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), smoothWheel: true});
+        
+        // GSAP & Lenis Sync
+        gsap.registerPlugin(ScrollTrigger);
+        lenis.on('scroll', ScrollTrigger.update);
+        gsap.ticker.add((time) => {
+            lenis.raf(time * 1000);
+        });
+        gsap.ticker.lagSmoothing(0);
+
         function raf(time) {lenis.raf(time); requestAnimationFrame(raf);}
         requestAnimationFrame(raf);
+
         function scrollToContact() {lenis.scrollTo('#contact-section', {duration: 2});}
         
+        // Countdown Logic
         const launchDate = new Date("June 1, 2026 00:00:00").getTime();
         setInterval(() => {
             const now = new Date().getTime();
@@ -299,7 +317,7 @@
             document.getElementById("seconds").innerText = String(Math.floor((dist % (1000 * 60)) / 1000)).padStart(2, '0');
         }, 1000);
 
-        gsap.registerPlugin(ScrollTrigger);
+        // Animations
         gsap.from(".hero-content-wrapper > *", {y: 30, opacity: 0, duration: 1.5, stagger: 0.2, ease: "power3.out", delay: 0.2});
         
         document.querySelectorAll(".inner-img").forEach(img => {
